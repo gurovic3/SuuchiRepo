@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="SuuchiTestsSuite" verbose="1">
+
+  	<test name="Test1">
+		<parameter name="browser" value="chrome"/>
+ 		<parameter name="name" value="Test1"/>
+ 		<parameter name="email" value="Test1@Test1.com"/>
+		<parameter name="phone" value="9797776677"/>
+		<parameter name="budget" value="1000000"/>
+		<parameter name="description" value="Test1"/>
+
+		<groups> <run> <include name="smokeTest" /> </run> </groups>
+		<classes>
+			<class name="suuchiTests.Test1">
+				<methods>
+					<include name="submitForm"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+ 	<test name="Test2">
+		<parameter name="browser" value="chrome"/>
+<!-- 		<groups> <run> <include name="smokeTest"> </run> </groups> -->
+		<classes>
+			<class name="suuchiTests.Test2">
+				<methods>
+					<include name="openPodcast"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+ 
+</suite>
